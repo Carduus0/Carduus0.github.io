@@ -34,8 +34,8 @@
 
 .social-icons img {
   margin-right: 10px;
-  width: 32px; /* Примерный размер иконок */
-  height: 32px;
+  width: 24px; /* Примерный размер иконок */
+  height: 24px;
 }
 
 .social-icons a {
@@ -44,6 +44,6 @@
 }
 
 .social-icons a:hover {
-  color: orange;
+  color: #c37d4a;
 }
 </style>

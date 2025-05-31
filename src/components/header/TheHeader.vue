@@ -97,7 +97,7 @@ onMounted(() => {
   justify-content: space-around;
   align-items: center;
   background-color: #c37d4a;
-  padding: 10px 15px; /* Добавим отступы */
+  padding: 5px 15px; /* Добавим отступы */
 }
 
 .burger-menu {
@@ -193,7 +193,6 @@ onMounted(() => {
   padding: 0 10px;
   line-height: 40px; /* Уменьшим высоту линии */
   text-decoration: none;
-  color: black;
 }
 
 .nav-link:hover {

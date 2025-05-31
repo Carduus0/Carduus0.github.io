@@ -24,6 +24,7 @@
 .title {
   font-size: 1.3em;
   margin-top: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .dev {

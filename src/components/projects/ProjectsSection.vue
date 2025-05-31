@@ -187,6 +187,8 @@ const closeFullScreen = () => {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Делаем flex-контейнером */
+  flex-direction: column;
 }
 
 .project-preview {
@@ -226,7 +228,7 @@ const closeFullScreen = () => {
   display: flex;
   padding: 1rem;
   gap: 0.5rem;
-  border-top: 1px solid #eee;
+  margin-top: auto;
 }
 
 .project-links a,
@@ -241,13 +243,19 @@ const closeFullScreen = () => {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out; /* Добавим transition для тени и transform */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .project-links a:hover,
 .project-links button:hover {
-  background-color: #c37d4a;
-  color: white;
+  background-color: #f0f0f0;
+}
+.project-links a:active,
+.project-links button:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Внутренняя тень */
+  transform: translateY(1px); /* Небольшое смещение вниз */
 }
 
 /* Fullscreen Overlay */

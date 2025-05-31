@@ -45,7 +45,7 @@ import { Mouse } from './components/mouse'
 }
 
 main {
-  background-color: #f6f7e7;
+  background-color: #f0f0f0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -64,8 +64,7 @@ main {
   flex-direction: column;
   background-color: #f0f0f0;
   padding: 10px;
-  border-radius: 5px;
-  border: none;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 ul {
@@ -89,6 +88,7 @@ ul {
     margin-right: 0;
     margin-bottom: 20px;
     padding: 0 5px;
+    box-shadow: none;
   }
 
   .right-side {

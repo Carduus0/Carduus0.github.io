@@ -49,6 +49,7 @@ section {
   margin-bottom: 1em;
   padding: 1em;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
@@ -79,4 +80,10 @@ ul {
 
 .left-aligned-list li {
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  section {
+    box-shadow: none; /* Убираем тень на мобильных */
+  }
 }
