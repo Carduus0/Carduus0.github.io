@@ -10,7 +10,6 @@
 <script setup></script>
 
 <style scoped>
-@import "@/styles/global.css";
 .footer {
   background-color: #c37d4a;
   padding: 10px 15px; /* Добавим отступы */
@@ -24,7 +23,7 @@
 }
 
 .footer__wrapper a {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   text-decoration: none;
 }

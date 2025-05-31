@@ -1,6 +1,6 @@
 <template>
   <section class="container section__contacts" id="Contacts">
-    <h2 class="section-title">{{ $t("header.contacts") }}</h2>
+    <h3 class="section-title">{{ $t('header.contacts') }}</h3>
     <ul class="social-icons">
       <li>
         <img src="/img/icon_Email.png" alt="Email_icon" />
@@ -21,16 +21,6 @@
 <script setup></script>
 
 <style scoped>
-@import "@/styles/global.css";
-.section__contacts {
-  /* Ваши стили для контактов */
-}
-
-.section-title {
-  font-family: "Roboto", sans-serif;
-  padding-top: 20px;
-}
-
 .social-icons {
   list-style: none;
   padding-left: 0;

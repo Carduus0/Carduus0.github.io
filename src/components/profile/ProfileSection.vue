@@ -9,8 +9,6 @@
 <script setup></script>
 
 <style scoped>
-@import '@/styles/global.css';
-
 .profile {
   display: flex;
   flex-direction: column;
@@ -24,10 +22,12 @@
 }
 
 .title {
-  font-size: 1.8em;
+  font-size: 1.3em;
+  margin-top: 0.5em;
 }
 
 .dev {
   display: inline-block;
+  font-size: 1em;
 }
 </style>

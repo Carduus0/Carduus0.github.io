@@ -165,7 +165,6 @@ const closeFullScreen = () => {
 </script>
 
 <style scoped>
-@import '@/styles/global.css';
 .container__projects {
   padding-top: 20px;
 }

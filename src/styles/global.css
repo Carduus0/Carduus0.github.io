@@ -7,7 +7,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #333333;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 }
@@ -15,16 +14,26 @@ body {
 h1,
 h2,
 h3 {
+  margin: 0;
+  padding: 0;
   color: #555555;
 }
 
 a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
   color: #333333;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
   color: #c37d4a;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 header,
@@ -34,10 +43,16 @@ footer {
   padding: 1em;
 }
 
-.section {
+section {
   background-color: #fff;
+  margin-top: 1em;
   margin-bottom: 1em;
   padding: 1em;
+  border-radius: 5px;
+}
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
 }
 
 .skills-tag {
@@ -50,6 +65,7 @@ footer {
 }
 
 ul {
+  font-family: 'Roboto', sans-serif;
   list-style-type: none;
   padding-left: 0;
 }
