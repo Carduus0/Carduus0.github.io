@@ -54,11 +54,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import type { Project } from '../../types/project'
 
 const isFullScreen = ref(false)
-const selectedProject = ref(null)
+const selectedProject = ref<Project | null>(null)
 
-const projects = ref([
+const projects = ref<Project[]>([
   {
     id: 'provision_monitoring',
     title: 'Приложение Provision Monitoring',
