@@ -1,0 +1,61 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color:  #555555;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c37d4a;
+}
+
+header, footer {
+  background-color: #c37d4a;
+  color: #fff;
+  padding: 1em;
+}
+
+main {
+  background-color: #e0e0e0;
+  padding: 1em;
+}
+
+.section {
+  background-color: #fff;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.skills-tag {
+  background-color: #7da7c3;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .left-aligned-list { /* текст выровнять по левому краю */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .left-aligned-list li {
+    margin-bottom: 5px;
+  }

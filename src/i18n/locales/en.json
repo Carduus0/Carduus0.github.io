@@ -1,0 +1,85 @@
+{
+  "pageA": {
+    "title": "Welcome!",
+    "greeting": "Hello!"
+  },
+  "common": {
+    "button": "Submit"
+  },
+  "header": {
+    "contacts": "Contacts",
+    "summary": "Summary",
+    "skills": "Skills",
+    "code": "Code",
+    "education": "Education",
+    "projects": "Projects",
+    "languages": "Languages"
+  },
+  "profile": {
+    "title": "Svetlana Khandeshina",
+    "developer": "Frontend Developer"
+  },
+  "contacts": {
+    "title": "Contacts"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "languages": {
+    "title": "Languages",
+    "russian": "Russian - native",
+    "english": "English - A2"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "summary": {
+    "title": "Summary",
+    "paragraph1": "First of all, I like it.",
+    "paragraph2": "For me, programming is an opportunity to create something new, find joy in solving complex problems, work in a team with cool people, and see my skills rewarded with a decent income."
+  },
+  "projects": {
+    "title": "My projects",
+    "view": "View",
+    "fullScreen": "Full Screen",
+    "provision_monitoring": {
+      "title": "Provision Monitoring Application",
+      "description": "Provision 360 is an intelligent monitoring system for construction sites developed by Mindset. It combines computer vision, 360° photography, and BIM modeling technologies for automatic construction progress control and increased process transparency."
+    },
+    "threejsTour1": {
+      "title": "Interactive 3D Tours (Three.js).",
+      "description": "Provision 360 3D tours are virtual excursions of construction sites, combining 360° panoramic photos, 3D models obtained through laser scanning, and interactive control tools. A handy tool for training, admissions and presentations."
+    },
+    "text_summarizer": {
+      "title": "Text Summarizer",
+      "description": "Uses artificial intelligence to summarize text concisely, providing accurate and up-to-date overviews. Browser extension."
+    },
+    "image_to_text": {
+      "title": "Image To Text",
+      "description": "Convert images to text using artificial intelligence. Saves time and effort. Browser extension."
+    },
+    "image_to_prompt": {
+      "title": "Image To Prompt",
+      "description": "Generate prompts from any picture with Image to Prompt! Browser extension."
+    },
+    "developmentButton": {
+      "title": "Development button",
+      "description": "That very button to make money, 300k/nanosecond) Automatic track playback is prohibited."
+    },
+    "shelter": {
+      "title": "Shelter",
+      "description": "A landing page for a pet shelter. Learning Projects."
+    },
+    "plants": {
+      "title": "Plants",
+      "description": "A landing page about indoor plants. Learning Projects."
+    },
+    "momentum": {
+      "title": "Momentum",
+      "description": "A clone of the popular extension with clocks, weather, and quotes. Learning Projects."
+    }
+  },
+  "myGit": {
+    "title": "My GitHub"
+  }
+}
