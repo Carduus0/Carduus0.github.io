@@ -233,11 +233,11 @@ const closeFullScreen = () => {
 .project-links a,
 .project-links button {
   flex-grow: 1;
-  padding: 0.75rem 1rem;
-  border: 1px solid #4b69ca;
+  padding: 0.3rem 1rem;
+  border: 1px solid #c37d4a;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
-  color: #4b69ca;
+  color: #c37d4a;
   background-color: transparent;
   text-align: center;
   text-decoration: none;
@@ -247,7 +247,7 @@ const closeFullScreen = () => {
 
 .project-links a:hover,
 .project-links button:hover {
-  background-color: #4b69ca;
+  background-color: #c37d4a;
   color: white;
 }
 

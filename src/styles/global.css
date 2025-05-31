@@ -1,13 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333333;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3 {
-  color:  #555555;
+h1,
+h2,
+h3 {
+  color: #555555;
 }
 
 a {
@@ -19,14 +27,10 @@ a:hover {
   color: #c37d4a;
 }
 
-header, footer {
+header,
+footer {
   background-color: #c37d4a;
   color: #fff;
-  padding: 1em;
-}
-
-main {
-  background-color: #e0e0e0;
   padding: 1em;
 }
 
@@ -46,16 +50,17 @@ main {
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .left-aligned-list { /* текст выровнять по левому краю */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .left-aligned-list li {
-    margin-bottom: 5px;
-  }
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.left-aligned-list {
+  /* текст выровнять по левому краю */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.left-aligned-list li {
+  margin-bottom: 5px;
+}

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="page">
     <TheHeader />
     <main class="main" style="position: relative">
       <Mouse />
@@ -23,26 +23,21 @@
 </template>
 
 <script setup>
-import { TheHeader } from "./components/header";
-import { TheFooter } from "./components/footer";
-import { ProfileSection } from "./components/profile";
-import { ContactSection } from "./components/contact";
-import { SummarySection } from "./components/summary";
-import { SkillsSection } from "./components/skills";
-import { ProjectsSection } from "./components/projects";
-import { EducationSection } from "./components/education";
-import { LanguagesSection } from "./components/languages";
-import { Mouse } from "./components/mouse";
+import { TheHeader } from './components/header'
+import { TheFooter } from './components/footer'
+import { ProfileSection } from './components/profile'
+import { ContactSection } from './components/contact'
+import { SummarySection } from './components/summary'
+import { SkillsSection } from './components/skills'
+import { ProjectsSection } from './components/projects'
+import { EducationSection } from './components/education'
+import { LanguagesSection } from './components/languages'
+import { Mouse } from './components/mouse'
 </script>
 
 <style scoped>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-#app {
-  font-family: "Roboto", Verdana, sans-serif;
+#page {
+  font-family: 'Roboto', Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -51,7 +46,6 @@ import { Mouse } from "./components/mouse";
 
 main {
   background-color: #f6f7e7;
-  padding: 15px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -60,7 +54,7 @@ main {
   display: flex;
   max-width: 1230px;
   margin: 0 auto;
-  padding: 0 15px;
+
   box-sizing: border-box;
 }
 
@@ -68,6 +62,10 @@ main {
   max-width: 35%;
   display: flex;
   flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 ul {
@@ -90,18 +88,12 @@ ul {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .right-side {
     width: 100%;
     padding: 0 10px;
-  }
-
-  main > div > div > section {
-    /* Выберите нужные селекторы */
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 </style>
