@@ -31,7 +31,7 @@ import { SkillsSection } from './components/skills'
 import { ProjectsSection } from './components/projects'
 import { EducationSection } from './components/education'
 import { LanguagesSection } from './components/languages'
-import { SertificatesSection } from './components/certificates'
+import { SertificatesSection } from './components/sertificates'
 import { Mouse } from './components/mouse'
 </script>
 
