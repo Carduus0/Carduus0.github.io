@@ -1,6 +1,6 @@
 <template>
-  <section class="container__certificates" id="certificates">
-    <!-- <h3 class="section-title">{{ $t('certificates.title') }}</h3> -->
+  <section class="container__sertificates" id="sertificates">
+    <!-- <h3 class="section-title">{{ $t('sertificates.title') }}</h3> -->
     <img
       ref="gratitudeImage1"
       src="/img/gratitude-min.jpg"
@@ -8,8 +8,8 @@
       @click.stop="toggleExpand1"
       :class="{ expanded: isExpanded1 }"
     />
-    <button class="toggle-more-certificates" @click="showMore = !showMore">
-      {{ showMore ? $t('certificates.less') : $t('certificates.more') }}
+    <button class="toggle-more-sertificates" @click="showMore = !showMore">
+      {{ showMore ? $t('sertificates.less') : $t('sertificates.more') }}
     </button>
     <img
       v-if="showMore"
@@ -24,7 +24,9 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+//import { useI18n } from 'vue-i18n'
 
+//const { t } = useI18n
 const isExpanded1 = ref(false)
 const isExpanded2 = ref(false)
 const showMore = ref(false)
@@ -58,7 +60,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.container__certificates {
+.container__sertificates {
   padding-top: 20px;
   text-align: center;
   display: flex;
@@ -87,7 +89,7 @@ img {
   transform: scale(1.05);
   object-fit: initial;
 }
-.toggle-more-certificates {
+.toggle-more-sertificates {
   padding: 0.2rem 0.5rem;
   border: 1px solid #c37d4a;
   border-radius: 4px;
@@ -102,10 +104,10 @@ img {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.toggle-more-certificates:hover {
+.toggle-more-sertificates:hover {
   background-color: #f0f0f0;
 }
-.toggle-more-certificates:active {
+.toggle-more-sertificates:active {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   transform: translateY(1px);
 }
