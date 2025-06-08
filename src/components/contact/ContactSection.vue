@@ -1,5 +1,5 @@
 <template>
-  <section class="container section__contacts" id="Contacts">
+  <section class="section__contacts" id="Contacts">
     <h3 class="section-title">{{ $t('header.contacts') }}</h3>
     <ul class="social-icons">
       <li>
@@ -34,7 +34,7 @@
 
 .social-icons img {
   margin-right: 10px;
-  width: 24px; /* Примерный размер иконок */
+  width: 24px;
   height: 24px;
 }
 

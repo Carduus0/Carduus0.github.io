@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer container">
+  <footer class="footer">
     <div class="footer__wrapper">
       <p>©2025</p>
       <a href="https://github.com/Carduus0"> Carduus0</a>
@@ -12,7 +12,7 @@
 <style scoped>
 .footer {
   background-color: #c37d4a;
-  padding: 10px 15px; /* Добавим отступы */
+  padding: 10px 15px;
 }
 
 .footer__wrapper {

@@ -54,6 +54,7 @@ section {
 
 .section-title {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
 }
 
 .skills-tag {
@@ -85,5 +86,9 @@ ul {
 @media (max-width: 768px) {
   section {
     box-shadow: none; /* Убираем тень на мобильных */
+  }
+
+  .section-title {
+    font-size: 1.4em;
   }
 }

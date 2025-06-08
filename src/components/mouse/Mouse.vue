@@ -1,5 +1,5 @@
 <template>
-  <div class="mouse-wrapper">
+  <div>
     <img
       :src="mouseSrc"
       :width="mouseWidth"
@@ -14,137 +14,127 @@
       :fireworksStyle="fireworksStyle"
       :isVisible="showCelebration"
     /> -->
-    <div v-if="showWinText" class="win-text" :style="winTextStyle">
-      You Win!
-    </div>
+    <div v-if="showWinText" class="win-text" :style="winTextStyle">You Win!</div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 //import { Fireworks } from "@/components/firework";
 const mousePoses = ref([
   {
-    src: "/img/mouse_peek.png",
+    src: '/img/mouse_peek.png',
     width: 50,
     height: 50,
     offsetX: -10,
-    offsetY: -10,
+    offsetY: -10
   },
   {
-    src: "/img/mouse_half.png",
+    src: '/img/mouse_half.png',
     width: 70,
     height: 70,
     offsetX: -20,
-    offsetY: -20,
+    offsetY: -20
   },
   {
-    src: "/img/mouse_corner.png",
+    src: '/img/mouse_corner.png',
     width: 40,
     height: 40,
     offsetX: -2,
-    offsetY: -2,
-  },
+    offsetY: -2
+  }
   // ... другие позы
-]);
+])
 
-const isVisible = ref(false);
+const isVisible = ref(false)
 const mouseStyle = ref({
-  position: "fixed", // absolute
-  top: "0",
-  left: "0",
-  zIndex: "1000",
-  cursor: "pointer",
-});
+  position: 'absolute', //  fixed
+  top: '0',
+  left: '0',
+  zIndex: '1000',
+  cursor: 'pointer'
+})
 
-const currentPoseIndex = ref(0);
+const currentPoseIndex = ref(0)
 
-const mouseSrc = computed(() => mousePoses.value[currentPoseIndex.value].src);
-const mouseWidth = computed(
-  () => mousePoses.value[currentPoseIndex.value].width
-);
-const mouseHeight = computed(
-  () => mousePoses.value[currentPoseIndex.value].height
-);
-const mouseOffsetX = computed(
-  () => mousePoses.value[currentPoseIndex.value].offsetX
-);
-const mouseOffsetY = computed(
-  () => mousePoses.value[currentPoseIndex.value].offsetY
-);
+const mouseSrc = computed(() => mousePoses.value[currentPoseIndex.value].src)
+const mouseWidth = computed(() => mousePoses.value[currentPoseIndex.value].width)
+const mouseHeight = computed(() => mousePoses.value[currentPoseIndex.value].height)
+const mouseOffsetX = computed(() => mousePoses.value[currentPoseIndex.value].offsetX)
+const mouseOffsetY = computed(() => mousePoses.value[currentPoseIndex.value].offsetY)
 
-let timeoutId;
-let mainElement;
-const showCelebration = ref(false);
-const showWinText = ref(false);
-const fireworksStyle = ref({ top: "0px", left: "0px" });
-const lastMouseX = ref(0);
-const lastMouseY = ref(0);
+let timeoutId
+let mainElement
+const showCelebration = ref(false)
+const showWinText = ref(false)
+const fireworksStyle = ref({ top: '0px', left: '0px' })
+const lastMouseX = ref(0)
+const lastMouseY = ref(0)
 
 const showMouse = () => {
-  const mainElement = document.querySelector(".main");
-  if (!mainElement) return;
-  const mainRect = mainElement.getBoundingClientRect();
-  const maxX = mainRect.width - mouseWidth.value;
-  const maxY = mainRect.height - mouseHeight.value;
+  const mainElement = document.querySelector('.main')
+  if (!mainElement) return
+  const mainRect = mainElement.getBoundingClientRect()
+  const maxX = mainRect.width - mouseWidth.value
+  const maxY = mainRect.height - mouseHeight.value
 
-  currentPoseIndex.value = Math.floor(Math.random() * mousePoses.value.length);
-  const randomX = Math.random() * maxX + mouseOffsetX.value;
-  const randomY = Math.random() * maxY + mouseOffsetY.value;
+  currentPoseIndex.value = Math.floor(Math.random() * mousePoses.value.length)
+  const randomX = Math.random() * maxX + mouseOffsetX.value
+  const randomY = Math.random() * maxY + mouseOffsetY.value
 
-  mouseStyle.value.top = `${randomY}px`;
-  mouseStyle.value.left = `${randomX}px`;
-  lastMouseX.value = randomX;
-  lastMouseY.value = randomY;
+  mouseStyle.value.top = `${randomY}px`
+  mouseStyle.value.left = `${randomX}px`
+  lastMouseX.value = randomX
+  lastMouseY.value = randomY
 
-  isVisible.value = true;
+  isVisible.value = true
 
   timeoutId = setTimeout(() => {
-    isVisible.value = false;
-  }, 2000);
-};
+    isVisible.value = false
+  }, 2000)
+}
 
 const handleMouseClick = () => {
-  isVisible.value = false;
-  clearTimeout(timeoutId);
-  showCelebration.value = true;
-  showWinText.value = true;
+  isVisible.value = false
+  clearTimeout(timeoutId)
+  showCelebration.value = true
+  showWinText.value = true
   fireworksStyle.value = {
-    top: lastMouseY.value + "px",
-    left: lastMouseX.value + "px",
-    transform: "translateX(-50%)",
-    width: "200px",
-    height: "200px",
-    position: "absolute",
-    zIndex: "1001",
-  };
+    top: lastMouseY.value + 'px',
+    left: lastMouseX.value + 'px',
+    transform: 'translateX(-50%)',
+    width: '200px',
+    height: '200px',
+    position: 'absolute',
+    zIndex: '1001'
+  }
 
   setTimeout(() => {
-    showCelebration.value = false;
-    showWinText.value = false;
-  }, 1500);
-};
+    showCelebration.value = false
+    showWinText.value = false
+  }, 1500)
+}
 
 const winTextStyle = computed(() => ({
-  position: "absolute",
-  top: lastMouseY.value - mouseHeight.value / 2 + "px",
-  left: lastMouseX.value + "px",
-  transform: "translateX(-50%)",
-  fontSize: "2em",
+  position: 'absolute',
+  top: lastMouseY.value - mouseHeight.value / 2 + 'px',
+  left: lastMouseX.value + 'px',
+  transform: 'translateX(-50%)',
+  fontSize: '2em',
   opacity: 1,
-  animation: "fadeOut 1.5s forwards",
-  zIndex: "1001",
-  pointerEvents: "none",
-}));
+  animation: 'fadeOut 1.5s forwards',
+  zIndex: '1001',
+  pointerEvents: 'none'
+}))
 
 onMounted(() => {
-  mainElement = document.querySelector(".main");
-  setInterval(showMouse, 3000); // Появляется каждые 5 секунд
-});
+  mainElement = document.querySelector('.main')
+  setInterval(showMouse, 3000) // Появляется каждые 5 секунд
+})
 
 onUnmounted(() => {
-  clearInterval(timeoutId);
-});
+  clearInterval(timeoutId)
+})
 </script>
 <style scoped>
 .mouse-wrapper {

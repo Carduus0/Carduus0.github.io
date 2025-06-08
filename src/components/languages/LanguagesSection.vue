@@ -1,5 +1,5 @@
 <template>
-  <section class="container container__languages" id="languages">
+  <section id="languages">
     <h3 class="section-title">{{ $t('languages.title') }}</h3>
     <ul class="left-aligned-list">
       <li>{{ $t('languages.russian') }}</li>

@@ -1,6 +1,5 @@
 <template>
-  <section class="container container__summary" id="summary">
-    <!-- <h3 class="section-title">{{ $t("summary.title") }}</h3> -->
+  <section class="container__summary" id="summary">
     <p>{{ $t('summary.paragraph1') }}</p>
   </section>
 </template>

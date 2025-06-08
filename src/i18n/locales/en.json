@@ -30,6 +30,11 @@
     "russian": "Russian - native",
     "english": "English - A2"
   },
+  "gratitudes": {
+    "title": "Gratitudes",
+    "more": "More...",
+    "less": "Less"
+  },
   "skills": {
     "title": "Skills"
   },
@@ -38,7 +43,7 @@
     "paragraph1": "For me, programming is an opportunity to create something new, find joy in solving complex problems, work in a team with cool people, and see my skills rewarded with a decent income."
   },
   "projects": {
-    "title": "My projects",
+    "title": "Projects",
     "view": "View",
     "fullScreen": "Full Screen",
     "provision_monitoring": {

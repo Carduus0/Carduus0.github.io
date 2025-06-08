@@ -1,5 +1,5 @@
 <template>
-  <section class="container" id="education">
+  <section id="education">
     <h3 class="section-title">{{ $t('education.title') }}</h3>
     <ul class="left-aligned-list">
       <li>

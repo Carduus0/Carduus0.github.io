@@ -1,5 +1,5 @@
 <template>
-  <header class="header__wrapper container">
+  <header class="header__wrapper">
     <div
       class="burger-menu"
       @click="toggleMobileNav"
@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { onMounted, ref, nextTick } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const { t, locale } = useI18n()
 const currentLocale = ref(localStorage.getItem('locale') || 'ru')
@@ -97,11 +97,11 @@ onMounted(() => {
   justify-content: space-around;
   align-items: center;
   background-color: #c37d4a;
-  padding: 5px 15px; /* Добавим отступы */
+  padding: 5px 15px;
 }
 
 .burger-menu {
-  display: none; /* Скрываем на десктопе */
+  display: none;
   cursor: pointer;
   padding: 10px;
 }
@@ -109,7 +109,7 @@ onMounted(() => {
 .burger {
   position: relative;
   width: 30px;
-  height: 22px; /* Чтобы вместить все линии */
+  height: 22px;
 }
 
 .burger span {
@@ -117,7 +117,7 @@ onMounted(() => {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: black; /* Или ваш цвет */
+  background-color: #f9f9f9;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -135,7 +135,7 @@ onMounted(() => {
 }
 
 .burger__open .burger__line1 {
-  top: 50%; /* Позиционируем по центру вертикали */
+  top: 50%;
   transform: translateY(-1px) rotate(45deg);
 }
 
@@ -144,10 +144,10 @@ onMounted(() => {
 }
 
 .burger__open .burger__line3 {
-  top: 50%; /* Позиционируем по центру вертикали */
+  top: 50%;
   transform: translateY(-1px) rotate(-45deg);
 }
-
+/* сделать жирный шрифт, само меню не на всю ширину */
 .mobile-nav-open .nav-list {
   display: flex !important;
   display: inline-block;
@@ -160,7 +160,7 @@ onMounted(() => {
   background-color: #c37d4a;
   border: none;
   padding: 6px;
-  z-index: 10; /* Чтобы быть над контентом */
+  z-index: 10;
 }
 
 .mobile-nav-open .nav-item {
@@ -191,7 +191,7 @@ onMounted(() => {
 
 .nav-link {
   padding: 0 10px;
-  line-height: 40px; /* Уменьшим высоту линии */
+  line-height: 40px;
   text-decoration: none;
 }
 
@@ -229,15 +229,15 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .header__wrapper {
-    position: sticky; /* Приклеиваем хедер */
+    position: sticky;
     top: 0;
-    justify-content: flex-start;
+    justify-content: flex-end;
     background-color: rgba(195, 125, 74, 0.9);
     padding: 0 6px;
     z-index: 100;
   }
   .nav-list {
-    display: none; /* Скрываем основное меню */
+    display: none;
   }
 
   .burger-menu {

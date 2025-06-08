@@ -3,12 +3,12 @@
     <TheHeader />
     <main class="main" style="position: relative">
       <Mouse />
-      <div class="main__two-column container">
+      <div class="main__two-column">
         <aside class="left">
           <ProfileSection />
-          <ContactSection />
           <EducationSection />
           <LanguagesSection />
+          <SertificatesSection />
         </aside>
 
         <div class="right-side">
@@ -26,12 +26,12 @@
 import { TheHeader } from './components/header'
 import { TheFooter } from './components/footer'
 import { ProfileSection } from './components/profile'
-import { ContactSection } from './components/contact'
 import { SummarySection } from './components/summary'
 import { SkillsSection } from './components/skills'
 import { ProjectsSection } from './components/projects'
 import { EducationSection } from './components/education'
 import { LanguagesSection } from './components/languages'
+import { SertificatesSection } from './components/certificates'
 import { Mouse } from './components/mouse'
 </script>
 
@@ -54,12 +54,11 @@ main {
   display: flex;
   max-width: 1230px;
   margin: 0 auto;
-
   box-sizing: border-box;
 }
 
 .left {
-  max-width: 35%;
+  max-width: 25%;
   display: flex;
   flex-direction: column;
   background-color: #f0f0f0;
@@ -91,8 +90,20 @@ ul {
     box-shadow: none;
   }
 
+  .left-top {
+    order: 1;
+  }
+
+  .right-main {
+    order: 2;
+  }
+
+  .left-bottom {
+    order: 3;
+  }
+
   .right-side {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="container container__projects" id="projects">
+  <section class="container__projects" id="projects">
     <h2 class="section-title">{{ $t('projects.title') }}</h2>
     <ul class="projects-grid">
       <li v-for="project in projects" :key="project.id" class="project-card">
@@ -187,7 +187,7 @@ const closeFullScreen = () => {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex; /* Делаем flex-контейнером */
+  display: flex;
   flex-direction: column;
 }
 
@@ -244,7 +244,7 @@ const closeFullScreen = () => {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out,
-    transform 0.1s ease-in-out; /* Добавим transition для тени и transform */
+    transform 0.1s ease-in-out;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -254,8 +254,8 @@ const closeFullScreen = () => {
 }
 .project-links a:active,
 .project-links button:active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Внутренняя тень */
-  transform: translateY(1px); /* Небольшое смещение вниз */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
 }
 
 /* Fullscreen Overlay */

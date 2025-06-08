@@ -1,2 +1,1 @@
-import ContactSection from "./ContactSection.vue";
-export { ContactSection };
+export { default as ContactSection } from './ContactSection.vue'
