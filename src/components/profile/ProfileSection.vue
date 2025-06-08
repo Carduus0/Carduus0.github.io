@@ -5,15 +5,15 @@
       <h2 class="title">{{ $t('profile.title') }}</h2>
       <h1 class="dev">{{ $t('profile.developer') }}</h1>
       <!-- <ContactSection /> -->
-      <div class="contacts">
+      <div class="contacts" id="contacts">
         <ul class="social-icons">
+          <li>
+            <img src="/img/telegram_ico32.png" alt="Telegram_icon" />
+            <a href="https://t.me/JS_SvetKhan">AlsoTelegram</a>
+          </li>
           <li>
             <img src="/img/icon_Email.png" alt="Email_icon" />
             <a href="mailto:s.carduus@gmail.com">s.carduus@gmail.com</a>
-          </li>
-          <li>
-            <img src="/img/telegram_ico32.png" alt="Telegram_icon" />
-            <a href="https://telegram.me/AlsoTelegram">AlsoTelegram</a>
           </li>
           <li>
             <img src="/img/discord_logo32.png" alt="Discord_icon" />
@@ -76,7 +76,9 @@ import { ContactSection } from '../../components/contact'
 
 .social-icons a {
   text-decoration: none;
-  color: black;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
 }
 
 .social-icons a:hover {
@@ -85,7 +87,22 @@ import { ContactSection } from '../../components/contact'
 @media (max-width: 768px) {
   .title,
   .dev {
-    font-size: 1.4em;
+    font-size: 1.5em;
+  }
+
+  .contacts {
+    padding-left: 10px;
+  }
+  .social-icons a {
+    font-size: 1.3em;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .social-icons li {
+    margin-bottom: 12px;
   }
 }
 </style>

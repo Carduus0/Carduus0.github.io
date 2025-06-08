@@ -13,7 +13,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   padding: 0;
   color: #555555;
@@ -45,9 +46,8 @@ footer {
 
 section {
   background-color: #fff;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-bottom: 1rem;
+  padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -84,11 +84,20 @@ ul {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 1.2em; /* Увеличиваем базовый шрифт для всего body на мобильных */
+  }
+
   section {
     box-shadow: none; /* Убираем тень на мобильных */
+    padding: 0.5em;
   }
 
   .section-title {
     font-size: 1.4em;
+  }
+
+  .left-aligned-list li {
+    font-size: 1.3em;
   }
 }

@@ -1,10 +1,11 @@
 <template>
   <section id="education">
-    <h3 class="section-title" @click="toggleCollapse">
+    <h2 class="section-title" @click="toggleCollapse">
       {{ $t('education.title') }}
-      <span class="collapse-icon" v-if="isMobile && !isCollapsed">+</span>
-      <span class="collapse-icon" v-if="isMobile && isCollapsed">-</span>
-    </h3>
+      <span class="collapse-icon" v-if="isMobile" :class="{ rotated: !isCollapsed }">
+        &#9660;
+      </span>
+    </h2>
     <div class="section-content" :class="{ collapsed: isCollapsed && isMobile }">
       <ul class="left-aligned-list">
         <li>
@@ -30,14 +31,15 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const isCollapsed = ref(false)
+const isCollapsed = ref(false) // Изначально свернуто на мобильных
 const isMobile = ref(false) // Состояние для отслеживания мобильного размера
 
 const checkMobile = () => {
-  isMobile.value = window.innerWidth <= 768 // Проверять на ваш брейкпоинт
-  // Если на десктопе, всегда развернуто
+  isMobile.value = window.innerWidth <= 768
   if (!isMobile.value) {
-    isCollapsed.value = false
+    isCollapsed.value = false // На десктопе всегда развернуто
+  } else {
+    isCollapsed.value = true // На мобильных по умолчанию свернуто
   }
 }
 
@@ -59,23 +61,31 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Ваши существующие стили */
 .section-title {
-  cursor: pointer; /* Делаем заголовок кликабельным */
+  font-family: 'Roboto', sans-serif;
   display: flex;
-  justify-content: space-between; /* Распределяем элементы по ширине */
+  justify-content: space-between;
   align-items: center;
 }
 
 .collapse-icon {
-  font-size: 1.5em; /* Размер иконки */
+  font-size: 1.4rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: rotate(0deg);
+  color: #333;
 }
 
+/* Стили для сворачивания секции */
 .section-content {
   overflow: hidden;
-  max-height: fit-content;
+  max-height: fit-content; /* По умолчанию развернуто на десктопе */
   transition: max-height 0.3s ease-out;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
 }
 
 .section-content.collapsed {
@@ -83,20 +93,28 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  .section-title {
+    padding-left: 10px;
+  }
   .section-content {
-    max-height: 0; /* По умолчанию свернуто на мобильных */
+    max-height: 0; /* На мобильных по умолчанию свернуто */
+    padding-left: 10px;
   }
 
   .section-content:not(.collapsed) {
-    max-height: fit-content; /* Разворачиваем при активном состоянии */
+    max-height: fit-content;
+  }
+
+  .section-title {
+    cursor: pointer;
   }
 
   .section-title .collapse-icon {
-    transform: rotate(0deg); /* Иконка для развернутого состояния */
+    transform: rotate(0deg);
   }
 
-  .section-title .collapse-icon.collapsed {
-    transform: rotate(90deg); /* Иконка для свернутого состояния */
+  .section-title .collapse-icon.rotated {
+    transform: rotate(180deg);
   }
 }
 </style>

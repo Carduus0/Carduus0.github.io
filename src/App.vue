@@ -6,6 +6,7 @@
       <div class="main__two-column">
         <aside class="left">
           <ProfileSection />
+          <SkillsSection />
           <EducationSection />
           <LanguagesSection />
           <SertificatesSection />
@@ -13,7 +14,6 @@
 
         <div class="right-side">
           <SummarySection />
-          <SkillsSection />
           <ProjectsSection />
         </div>
       </div>
@@ -73,7 +73,7 @@ ul {
 
 .right-side {
   flex: 1; /* Занимает оставшееся пространство */
-  padding: 0 10px;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {

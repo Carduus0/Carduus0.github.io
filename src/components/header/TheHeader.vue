@@ -18,6 +18,19 @@
             t('header.contacts')
           }}</a>
         </li>
+
+        <li class="nav-item">
+          <a href="#education" class="nav-link" @click="closeMobileNav">{{
+            t('header.education')
+          }}</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#languages" class="nav-link" @click="closeMobileNav">{{
+            t('header.languages')
+          }}</a>
+        </li>
+
         <li class="nav-item">
           <a href="#summary" class="nav-link" @click="closeMobileNav">{{
             t('header.summary')
@@ -28,36 +41,22 @@
             t('header.skills')
           }}</a>
         </li>
-        <li class="nav-item">
-          <a href="#my-git" class="nav-link" @click="closeMobileNav">{{
-            t('header.code')
-          }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="#education" class="nav-link" @click="closeMobileNav">{{
-            t('header.education')
-          }}</a>
-        </li>
+
         <li class="nav-item">
           <a href="#projects" class="nav-link" @click="closeMobileNav">{{
             t('header.projects')
           }}</a>
         </li>
-        <li class="nav-item">
-          <a href="#languages" class="nav-link" @click="closeMobileNav">{{
-            t('header.languages')
-          }}</a>
-        </li>
-        <li class="nav-item language-switcher">
-          <button :class="{ active: currentLocale === 'en' }" @click="setLocale('en')">
-            EN
-          </button>
-          <button :class="{ active: currentLocale === 'ru' }" @click="setLocale('ru')">
-            RU
-          </button>
-        </li>
       </ul>
     </nav>
+    <div class="language-switcher">
+      <button :class="{ active: currentLocale === 'en' }" @click="setLocale('en')">
+        EN
+      </button>
+      <button :class="{ active: currentLocale === 'ru' }" @click="setLocale('ru')">
+        RU
+      </button>
+    </div>
   </header>
 </template>
 
@@ -147,12 +146,13 @@ onMounted(() => {
   top: 50%;
   transform: translateY(-1px) rotate(-45deg);
 }
-/* сделать жирный шрифт, само меню не на всю ширину */
+
 .mobile-nav-open .nav-list {
-  display: flex !important;
-  display: inline-block;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 0;
+  justify-items: start;
+
   position: fixed;
   top: 42px;
   left: 5px;
@@ -165,13 +165,15 @@ onMounted(() => {
 
 .mobile-nav-open .nav-item {
   margin-left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .mobile-nav-open .nav-link {
   color: white;
   padding: 0.5rem 0;
   line-height: 1.5;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .nav-list {
@@ -205,7 +207,7 @@ onMounted(() => {
 }
 
 .language-switcher button {
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem;
   border: 1px solid transparent;
   cursor: pointer;
   background-color: transparent;
@@ -231,7 +233,7 @@ onMounted(() => {
   .header__wrapper {
     position: sticky;
     top: 0;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: rgba(195, 125, 74, 0.9);
     padding: 0 6px;
     z-index: 100;
@@ -244,10 +246,10 @@ onMounted(() => {
     display: block;
   }
 
-  .language-switcher {
-    margin-top: 1rem;
+  .language-switcher button {
     justify-content: flex-start;
     gap: 0.5rem;
+    font-size: 1.1rem;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <section class="section__contacts" id="Contacts">
-    <h3 class="section-title">{{ $t('header.contacts') }}</h3>
+    <h2 class="section-title">{{ $t('header.contacts') }}</h2>
     <ul class="social-icons">
       <li>
         <img src="/img/icon_Email.png" alt="Email_icon" />

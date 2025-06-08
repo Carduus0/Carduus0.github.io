@@ -26,7 +26,11 @@
           >
             {{ $t('projects.view') }}
           </a>
-          <button @click="openFullScreen(project)" v-if="project.fullScreenUrl">
+          <button
+            @click="openFullScreen(project)"
+            v-if="project.fullScreenUrl"
+            class="btn-full-screen"
+          >
             {{ $t('projects.fullScreen') }}
           </button>
         </div>
@@ -167,6 +171,7 @@ const closeFullScreen = () => {
 <style scoped>
 .container__projects {
   padding-top: 20px;
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -212,12 +217,13 @@ const closeFullScreen = () => {
   font-family: 'Roboto', sans-serif;
   padding: 1rem;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
 .project-description {
   font-family: 'Roboto', sans-serif;
+  font-size: 1em;
   padding: 0 1rem 1rem;
   margin: 0;
   color: #555;
@@ -234,10 +240,11 @@ const closeFullScreen = () => {
 .project-links a,
 .project-links button {
   flex-grow: 1;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0.5rem;
   border: 1px solid #c37d4a;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
+  font-size: 1em;
   color: #c37d4a;
   background-color: transparent;
   text-align: center;
@@ -258,7 +265,6 @@ const closeFullScreen = () => {
   transform: translateY(1px);
 }
 
-/* Fullscreen Overlay */
 .fullscreen-overlay {
   position: fixed;
   top: 0;
@@ -294,5 +300,16 @@ const closeFullScreen = () => {
   color: white;
   font-size: 1.5rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project-description {
+    font-size: 1.2em;
+  }
+
+  .project-links a,
+  .project-links button {
+    font-size: 1.2rem;
+  }
 }
 </style>
